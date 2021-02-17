@@ -82,7 +82,7 @@ socketio = SocketIO(app,cors_allowed_origins="*")
 def value_change(message):
     last_40=message["filter"][-40:].lower()
     print(last_40)
-    datatosend={"prediction":predict_completions(last_40)}
+    datatosend={"prediction":predict_completions(last_40,int(message["thep"]))}
     emit('event',datatosend,broadcast=True)
     socketio.sleep(0)
 

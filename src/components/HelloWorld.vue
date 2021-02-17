@@ -1,9 +1,10 @@
 <template>
   <div class="hello">
-      
+        <input id="change" type="number" maxlength="2" size="2" placeholder="3" v-model="thep">
+
     <div class="row">
       <form class="col s12">
-   
+        
         <div class="row">
           <div class="input-field col s12">
             <textarea  id="mysize" class="materialize-textarea" cols=100 placeholder="textarea" v-model="text" ></textarea>
@@ -29,6 +30,7 @@ export default {
   data(){
     return{
       text:"The JSON format is syntactically identical to the code for creating JavaScript objects.Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.",
+      thep:3,
       helpertext:null,
       socket:io('http://localhost:5000',{
         transport:[
@@ -61,12 +63,13 @@ export default {
   },
   watch:{
     text :function(){
-        console.log(this.text)
+        console.log(this.thep)
 
         if(this.text.length>40){
                 let mythis=this;
                 mythis.socket.emit("filter change",{
-                  filter:mythis.text
+                  filter:mythis.text,
+                  thep:mythis.thep
           })
         }
     }
@@ -77,6 +80,13 @@ export default {
 <style scoped>
 #mysize{
   height:50rem !important
+}
+#change{
+  width: 100px;
+  float: right;
+  height: 40px;
+  margin-top: 10px;
+  overflow: hidden;
 }
 </style>
 
