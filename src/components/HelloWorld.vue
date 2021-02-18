@@ -1,16 +1,18 @@
 <template>
   <div class="hello">
-        <input id="change" type="number" maxlength="2" size="2" placeholder="3" v-model="thep">
+ <input id="change" type="number" maxlength="2" size="2" placeholder="enter No" v-model="thep">
 
     <div class="row">
       <form class="col s12">
         
         <div class="row">
-          <div class="input-field col s12">
-            <textarea  id="mysize" class="materialize-textarea" cols=100 placeholder="textarea" v-model="text" ></textarea>
-            <div @change="helpertext" >
-            <span  v-for="(i,ii) in helpertext" :key="ii" class="chip"> {{i}} &nbsp;</span>
+          <div @change="helpertext" >
+            <span  v-for="(i,ii) in helpertext" :key="ii" class="chip" v-on:click="pasteit(i)" style="cursor:pointer"> &nbsp; {{i}} &nbsp;</span>
             </div>
+          <div class="input-field col s12">
+
+            <textarea  id="mysize" class="materialize-textarea" cols=100 placeholder="textarea" v-model="text" ></textarea>
+            
           </div>
         </div>
       </form>
@@ -29,7 +31,7 @@ export default {
   },
   data(){
     return{
-      text:"The JSON format is syntactically identical to the code for creating JavaScript objects.Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.",
+      text:"That which does not kill us makes us stronger. To live is to suffer, to survive is to find some meaning in the suffering.",
       thep:3,
       helpertext:null,
       socket:io('http://localhost:5000',{
@@ -43,6 +45,10 @@ export default {
   methods:{
     input(){
       console.log(this.text)
+    },
+    pasteit(i){
+      console.log(i)
+      this.text+=i
     }
   },
   mounted(){
@@ -88,5 +94,6 @@ export default {
   margin-top: 10px;
   overflow: hidden;
 }
+
 </style>
 
