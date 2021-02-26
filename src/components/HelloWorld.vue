@@ -102,8 +102,9 @@ export default {
 .chip{
 cursor:pointer;
 font-size:22px;
-
 }
+
+
 
 </style>
 
