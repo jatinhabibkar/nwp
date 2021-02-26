@@ -3,11 +3,11 @@
  <input id="change" type="number" maxlength="2" size="2" placeholder="enter No" v-model="thep">
 
     <div class="row">
-      <form class="col s12">
+      <form class="col s12" id="formhai">
         
         <div class="row">
           <div @change="helpertext" >
-            <span  v-for="(i,ii) in helpertext" :key="ii" class="chip" v-on:click="pasteit(i)" style="cursor:pointer"> &nbsp; {{i}} &nbsp;</span>
+            <span  v-for="(i,ii) in helpertext" :key="ii" class="chip" v-on:click="pasteit(i)" > &nbsp; {{i}} &nbsp;</span>
             </div>
           <div class="input-field col s12">
 
@@ -85,7 +85,8 @@ export default {
 
 <style scoped>
 #mysize{
-  height:50rem !important
+  height:50rem !important;
+  font-size: 40px;
 }
 #change{
   width: 100px;
@@ -93,6 +94,15 @@ export default {
   height: 40px;
   margin-top: 10px;
   overflow: hidden;
+}
+#formhai{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.chip{
+cursor:pointer;
+font-size:22px;
+
 }
 
 </style>

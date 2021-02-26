@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <div class="nav-wrapper teal">
+    <div class="nav-wrapper teal ">
       <a href="#!" class="brand-logo "><i class="material-icons">cloud</i>NWP</a>
       <ul class="right hide-on-med-and-down">
       </ul>
@@ -21,5 +21,6 @@ export default {
 </script>
 
 <style>
+
 
 </style>
