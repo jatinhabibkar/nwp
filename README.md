@@ -1,24 +1,6 @@
 # nwp
+Next word prediction or n word prediction is use to predict next n words after every single character you type will writing eassy or any text 
 
-## Project setup
-```
-npm install
-```
+This project is developed using vuejs,flask and tensorflow frameworks feel free to fork to add new features 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+demo of project [Ytlink](https://www.youtube.com/embed/brKJTJnFTu0)
