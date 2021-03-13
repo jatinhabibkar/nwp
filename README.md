@@ -3,4 +3,15 @@ Next word prediction or n word prediction is use to predict next n words after e
 
 This project is developed using vuejs,flask and tensorflow frameworks feel free to fork to add new features 
 
+## RUN project
+run frontend vue server
+`make frontend`
+
+run backend flask server
+`make backendS`
+
+run make clean to clean local venv and node modules to get space
+`make clean`
+
 demo of project [Ytlink](https://youtu.be/brKJTJnFTu0)
+

@@ -6,7 +6,7 @@ frontend:
 	npm install; \
 	clear
 	npm run serve
-# run frontend vue server by make backendS
+# run backend flask server by make backendS
 backendS: 
 	@echo "runnning backend" ;\
 	python3 -m venv ${BDIR}venv 
