@@ -15,3 +15,5 @@ run make clean to clean local venv and node modules to get space
 
 demo of project [Ytlink](https://youtu.be/brKJTJnFTu0)
 
+Implementation details [ppt link](https://drive.google.com/file/d/1tzfJq8MxWrKiCDaJlX6x6LJziJ9q8w4x/view?usp=sharing).
+
